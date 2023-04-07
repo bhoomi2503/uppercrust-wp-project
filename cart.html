@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="titlestyle.css">
+    <link rel="stylesheet" href="mestyle.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><img src="C:\Users\bhoom\OneDrive\Desktop\wp images\UPPER_CRUSTt-removebg-preview.png" alt=""
+                    style="height: 50px;"><a href="#homeclick"></a></li>
+            <li><a href="uppercrust.html#aboutclick">ABOUT US</a></li>
+            <li><a href="uppercrust.html#orderclick">ORDER</a></li>
+            <li><a href="uppercrust.html#findclick">FIND US</a></li>
+            <li><a href="uppercrust.html#contactclick">CONTACT</a></li>
+            <li><button onclick="document.getElementById('id01').style.display='block'"
+                    style="background-color: #333;">Login</button></li>
+    
+        </ul>
+    </div>
+
+    
+    
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div id="ngo-table" class="table-container">
+        <h4 class="title" style="margin-left: 650px;padding-top: 150px; margin-bottom: 50px;"><span class="title1" style="position: relative;">DETAILS </span></h4>
+        <input type="text" class="search-box" placeholder="Search with keywords" ng-model="lookup" style="position: relative;" /><br>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Mobile</th>
+                    <th>Country</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="table in tables | filter: lookup">
+                    <td>{{ table.name }}</td>
+                    <td>{{ table.email }}</td>
+                    <td>{{ table.password }}</td>
+                    <td>{{ table.mobile}}</a></td>
+                    <td>{{ table.country}}</a></td>
+                    <td>{{ table.address }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <div class="footer" id="contactclick" style="margin-top: 200px;">
+    
+        <img src="C:\Users\bhoom\OneDrive\Desktop\wp images\andy-li-RndRFJ1v1kk-unsplash.jpg" alt="" style="height: 500px;">
+        <div class="footcontact" style="color: azure;font-size: 30px; height: 400px;padding: 70px;">
+    
+            <h3 style="padding: 20px;">Contact Us</h3>
+            <p style="padding: 20px;">@uppercrust</p>
+            <p style="padding: 20px;">instagram@uppercrust</p>
+            <p style="padding: 20px;">123456789</p><br><br>
+            <div class="footer-icons">
+    
+                <img src="C:\Users\bhoom\OneDrive\Desktop\wp images\facebook.png" alt="" height="50px"
+                    style="padding: 10px;height: 50px;">
+                <img src="C:\Users\bhoom\OneDrive\Desktop\wp images\google.png" alt="" height="50px"
+                    style="padding: 10px;height: 50px;">
+                <img src="C:\Users\bhoom\OneDrive\Desktop\wp images\twitter.png" alt="" height="50px"
+                    style="padding: 10px;height: 50px;">
+                <img src="C:\Users\bhoom\OneDrive\Desktop\wp images\instagram.png" alt="" height="50px"
+                    style="padding: 10px;height: 50px;">
+    
+            </div>
+    
+        </div>
+
+            
+</body>
+<script>
+    
+        var app = angular.module("myApp", []);
+
+            // Define the Angular controller
+            app.controller("myCtrl", function ($scope, $http) {
+                $http.get("display.php")
+                    .then(function (response) {
+                        $scope.tables = response.data;
+                    });
+            });
+</script>
+
+</html>

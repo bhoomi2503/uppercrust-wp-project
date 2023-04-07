@@ -1,0 +1,222 @@
+.title1 {
+    animation: color-animation 4s linear infinite;
+    --color-1: #AD8B73;
+    --color-2: #CEAB93;
+    --color-3: #DCD7C9;
+}
+
+.title2 {
+    animation: color-animation 4s linear infinite;
+    --color-1: #DCD7C9;
+    --color-2: #3F4E4F;
+    --color-3: #2C3639;
+}
+
+.title3 {
+    animation: color-animation 4s linear infinite;
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #3D8DAE;
+}
+
+.title4 {
+    animation: color-animation 4s linear infinite;
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+    0% {
+        color: var(--color-1)
+    }
+
+    32% {
+        color: var(--color-1)
+    }
+
+    33% {
+        color: var(--color-2)
+    }
+
+    65% {
+        color: var(--color-2)
+    }
+
+    66% {
+        color: var(--color-3)
+    }
+
+    99% {
+        color: var(--color-3)
+    }
+
+    100% {
+        color: var(--color-1)
+    }
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 3vw;
+    text-transform: uppercase;
+    margin-left: 20%;
+}
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+    
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+    
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+    
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+    
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+    
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+    
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+    
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+    
+            to {
+                transform: scale(1)
+            }
+        }
+    
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+    
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+form {
+    width: 300px;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 50px auto 0;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px
+}
+
+label i {
+    color: #999;
+    font-size: 80%;
+}
+
+input,
+select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.row {
+    padding-bottom: 10px;
+}
+
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+
+.form-inline label,
+.form-inline input {
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 90%;
+}
+
+input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #0165b6;
+}
+            
